@@ -1,62 +1,62 @@
 
 //A-Z --> 65 A 90
 //a-z --> 97 a 122
-
+//.appendChild = "<div></div>
+window.cipher = {
 //Funcion de cifrar
-
-//.appendChild = "<div></div
-//window.cipher = {
-
-
-const cipherOn = () =>
+encode: (text, offset) =>
 {
-  let toCipher = document.getElementById('toCipher').value;
-  let offset = document.getElementById('offset').value;
 //quiero que se guarde el texto ya cifrado
   let cipher = "";
   //Donde voy a guardar ya convertido en codigo ascci modificado con la formula de michelle
   let ascii = 0;
 
-  for(let i = 0; i < toCipher.length; i++){
+  for(let i = 0; i < text.length; i++){
 
     //para saber si es mayuscula
-    if (toCipher.charCodeAt(i) >= 65 && toCipher.charCodeAt(i) < 97) {
-    ascii = (toCipher.charCodeAt(i) - 65 + parseInt(offset)) % 26 + 65;
+if (text.charCodeAt(i)  >= 65 && text.charCodeAt(i) <= 90) {
+    ascii = (text.charCodeAt(i) - 65 + parseInt(offset)) % 26 + 65;
  // para saber si es minuscula
-  } else if (toCipher.charCodeAt(i) >= 97 && toCipher.charCodeAt(i) <= 122) {
-    ascii = (toCipher.charCodeAt(i) - 97 + parseInt(offset)) % 26 + 97;
+} else if (text.charCodeAt(i) >= 97 && text.charCodeAt(i) <= 122) {
+    ascii = (text.charCodeAt(i) - 97 + parseInt(offset)) % 26 + 97;
  // para saber si es espacio
-  } else if (toCipher.charCodeAt(i) == 32) {
-    cipher += " ";
+} else {
+    ascii = text.charCodeAt(i);
   }
 
    cipher += String.fromCharCode(ascii);
 
  }
-return document.getElementById('toDecipher').value = cipher;
-}
-
+return cipher;
+},
 //Funcion de Decifrado
-const cipheroff = () => {
-  let toDecipher = document.getElementById('toDecipher').value;
-  let offset = document.getElementById('offset').value;
+decode: (text, offset) => {
   //para guardar las letras de la letra a descifrar
 let decipher = "";
 let ascii = 0 ;
-//
-  for(let i = 0; i< toDecipher.length; i++) {
-
-    if (toDecipher.charCodeAt(i) >= 65 && toDecipher.charCodeAt(i) < 97) {
-    ascii = (toDecipher.charCodeAt(i) + 65 - parseInt(offset)) % 26 + 65;
-  } else if(toDecipher.charCodeAt(i) >= 97 && toDecipher.charCodeAt(i) <= 122) {
-    ascii = (toDecipher.charCodeAt(i) + 97 + parseInt(offset)) % 26 + 97;
-  } else if (toDecipher.charCodeAt(i) == 32) {
-    ascii = toDecipher.charCodeAt(i);
+// Recorre letra por letra de la cadena de texto
+  for(let i = 0; i < text.length; i++) {
+    //para saber si es mayuscula
+    if (text.charCodeAt(i) >= 65 && text.charCodeAt(i) <= 90) {
+    ascii = (text.charCodeAt(i) + 65 - parseInt(offset)) % 26 + 65;
+    //para saber si es minuscula
+  } else if(text.charCodeAt(i) >= 97 && text.charCodeAt(i) <= 122) {
+    ascii = (text.charCodeAt(i) - 122 - parseInt(offset)) % 26 + 122;
+ // para saber si es espacio
+} else {
+    ascii = text.charCodeAt(i);
   }
+  //Junta la cadena de texto decifrada
   decipher += String.fromCharCode(ascii);
   }
-    return document.getElementById('toCipher').value = decipher;
+    return decipher;
 
-}
+},
+/*createCipherWithOffset: (text, offset) => {
 
-//};
+return { encode (), decode() };
+
+
+} */
+
+};

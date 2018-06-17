@@ -1,0 +1,23 @@
+header {
+  display: block;
+  background-color: #8A0808;
+  color: white;
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.globo{
+width: 84px;
+}
+
+.globor {
+  float: right;
+}
+
+#formulary {
+background-color: #52bdae;
+margin-left: -3px;
+text-align: center;
+font-family: 'Gloria Hallelujah', cursive;
+
+}
