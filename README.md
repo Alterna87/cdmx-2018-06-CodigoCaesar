@@ -59,7 +59,7 @@ del DOM para mostrar (escribir) los resultados.
 
 Puedes ver el planeamiento del proyecto [aqui](https://trello.com/b/7rxlJfmv/cifrado-cesar)
 
-### Definición del producto)
+### Definición del producto
 
 Los usuarios que utlizarán esta páguina la mayoria solicita que sea fácil de utilizar, muy intuitiva, debido a que la utilizarán la mayoría del tiempo durante la planeación de su fiesta, es por eso que se desarrolló una páguina sin muchos elementos que llegue a saturar al usuario, es una aplicación muy simple pero cumple con el objetivo que solicita el usuario
 
