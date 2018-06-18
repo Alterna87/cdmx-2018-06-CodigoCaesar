@@ -1,11 +1,26 @@
-header {
+body {
+  background-color: #c77800;
+background: url("img/party.jpg")  no-repeat center center fixed;
+
+
+}
+
+
+ header {
   display: block;
-  background-color: #8A0808;
+  background-color: #dc3545;
   color: white;
   text-align: center;
   font-family: 'Gloria Hallelujah', cursive;
+
 }
 
+
+
+label {
+  color: #c77800;
+
+}
 .globo{
 width: 84px;
 }
@@ -19,5 +34,15 @@ background-color: #52bdae;
 margin-left: -3px;
 text-align: center;
 font-family: 'Gloria Hallelujah', cursive;
+font-size: 24px;
+opacity: 0.9;
+filter: alpha(opacity=60)
 
+}
+
+p {
+font-family: 'Gloria Hallelujah', cursive, bold;
+font-size: 20px;
+color: black;
+text-align: justify;
 }
